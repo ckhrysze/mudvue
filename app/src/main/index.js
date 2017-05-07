@@ -11,11 +11,10 @@ function createWindow () {
   /**
    * Initial window options
    */
-  mainWindow = new BrowserWindow({
-    height: 600,
-    width: 800
-  })
+  mainWindow = new BrowserWindow()
+  mainWindow.maximize()
 
+  require('./menu')
   mainWindow.loadURL(winURL)
 
   mainWindow.on('closed', () => {

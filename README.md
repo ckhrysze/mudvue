@@ -1,4 +1,4 @@
-# muddyvue
+# mudvue
 
 > Electron based mud client
 

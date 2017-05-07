@@ -5,7 +5,8 @@ export default [
     component: require('components/LandingPageView')
   },
   {
-    path: '*',
-    redirect: '/'
+    path: '/game',
+    name: 'game',
+    compoent: require('components/GameView')
   }
 ]

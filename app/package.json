@@ -1,5 +1,5 @@
 {
-  "name": "muddyvue",
+  "name": "mudvue",
   "version": "0.0.0",
   "description": "Electron based mud client",
   "main": "./dist/main.js",
