@@ -1,12 +1,15 @@
+const landingPage = require('components/LandingPageView')
+const gameView = require('components/GameView')
+
 export default [
   {
     path: '/',
     name: 'landing-page',
-    component: require('components/LandingPageView')
+    component: landingPage
   },
   {
     path: '/game',
     name: 'game',
-    compoent: require('components/GameView')
+    component: gameView
   }
 ]

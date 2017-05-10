@@ -1,8 +1,21 @@
 const {Menu} = require('electron')
 const electron = require('electron')
-const app = electron.app
+// const app = electron.app
 
 const template = [
+  {
+    label: 'MudVue',
+    submenu: [
+      {
+        label: 'Disconnect',
+        click (item, focusedWindow) {
+          if (focusedWindow) {
+            console.log('disconnect')
+          }
+        }
+      }
+    ]
+  },
   {
     label: 'Edit',
     submenu: [
@@ -23,9 +36,6 @@ const template = [
       },
       {
         role: 'paste'
-      },
-      {
-        role: 'pasteandmatchstyle'
       },
       {
         role: 'delete'
@@ -56,18 +66,6 @@ const template = [
         type: 'separator'
       },
       {
-        role: 'resetzoom'
-      },
-      {
-        role: 'zoomin'
-      },
-      {
-        role: 'zoomout'
-      },
-      {
-        type: 'separator'
-      },
-      {
         role: 'togglefullscreen'
       }
     ]
@@ -88,12 +86,11 @@ const template = [
     submenu: [
       {
         label: 'Learn More',
-        click () { require('electron').shell.openExternal('http://electron.atom.io') }
+        click () { electron.shell.openExternal('http://electron.atom.io') }
       }
     ]
   }
 ]
-
 
 const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)

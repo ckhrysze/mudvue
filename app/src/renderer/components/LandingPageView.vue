@@ -24,7 +24,7 @@
       establishConnection (e) {
         console.log(e)
         this.$router.replace(
-          '/game',
+          {name: 'game'},
           function (e) {
             console.log(e)
           },
